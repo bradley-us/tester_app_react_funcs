@@ -10,6 +10,8 @@ const { SourceMapDevToolPlugin } = require('webpack'); // Para conocer el Source
 const port = process.env.PORT || 3000;
 
 // Exportar configuración de WebPack
+// const ESLintPlugin = require('eslint-webpack-plugin');
+
 module.exports = {
 
     entry: './src/index.jsx',

@@ -7,10 +7,11 @@
     "test": "echo \"Comando no especificado\" && exit 1",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
-    "dev": "webpack-dev-server --mode development --hot --open --static",
+    "deploy:dev": "webpack-dev-server --mode development --hot --open --static",
     "docs:build": "documentation build src/** -f html -o docs",
     "build": "webpack --mode development",
-    "build:prod": "webpack --mode production"
+    "build:prod": "webpack --mode production",
+    "deploy:prod": "netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod"
   },
   "repository": {
     "type": "git",
@@ -35,8 +36,9 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "documentation": "^13.2.5",
-    "eslint": "^8.3.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.1",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
@@ -44,6 +46,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "netlify-cli": "^8.0.5",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.3.0",
     "source-map-loader": "^3.0.0",
